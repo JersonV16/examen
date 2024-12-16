@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    
+    <!-- Formulario para agregar tareas -->
+    <form action="/add_task" method="POST">
+        <input type="text" name="task" placeholder="Agregar tarea" required>
+        <button type="submit">Agregar</button>
+    </form>
+
+    <h2>Estudiantes</h2>
+    <ul>
+        {% for student in students %}
+        <li>{{ student.name }} - {{ student.email }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Tareas</h2>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            <span style="text-decoration: {% if task.completed %}line-through{% endif %};">
+                {{ task.task }}
+            </span>
+            {% if not task.completed %}
+                <a href="/complete_task/{{ loop.index0 }}">Marcar como completada</a>
+            {% endif %}
+            <a href="/delete_task/{{ loop.index0 }}">Eliminar</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,12 +1,15 @@
-# Proyecto Flask con Docker
+# Flask App with Docker
 
-Este proyecto es una aplicación web simple creada con Flask y Docker. Permite gestionar tareas y mostrar un registro de estudiantes.
+Este proyecto es una aplicación web simple usando Flask, contenedorizada con Docker.
 
-## Instrucciones para ejecutar el proyecto localmente
+## Requisitos
 
-### 1. Clonar el repositorio
+- Docker instalado en tu máquina.
+- Git instalado.
 
-Clona este repositorio en tu máquina local usando el siguiente comando:
+## Ejecutar el Proyecto Localmente
 
-```bash
-git clone https://github.com/tuusuario/tu-repositorio.git
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tuusuario/flask-app-docker.git
+

@@ -24,3 +24,16 @@ Sigue los siguientes pasos para configurar el proyecto en tu máquina local.
    ```bash
    git clone https://github.com/usuario/examen-app.git
    cd exame-app
+
+   
+   Si estás creando un nuevo proyecto, sigue estos pasos:
+   mkdir nombre-del-proyecto
+   cd nombre-del-proyecto
+
+   Inicia un repositorio Git dentro del proyecto:
+   git init
+
+
+2.    Crear un Entorno Virtual
+Para mantener las dependencias aisladas, crea un entorno virtual:
+
